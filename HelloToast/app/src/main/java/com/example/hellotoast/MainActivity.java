@@ -16,12 +16,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mShowCount = findViewById(R.id.show_count);
     }
-
+    //show toast when the toast button is clicked
+    //@param view: is the view that triggers  the onClick handler. Is not used since
+    //              toast always shows on top
     public void showToast(View view) {
         Toast toast = Toast.makeText(this, R.string.toast_message,Toast.LENGTH_SHORT);
         toast.show();
     }
 
+    //increments the number in the TextView when the Count button is clicked
+    //@param view: is the view that triggers the onClick handler. Is not used since
+    //              count appears inside the view
     public void countUp(View view) {
         mCount++;
         //make sure the view is not null
